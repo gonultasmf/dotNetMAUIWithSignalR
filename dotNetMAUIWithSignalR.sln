@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotNetWebApi.Server", "dotNetWebApi.Server\dotNetWebApi.Server.csproj", "{05FC083C-F2B1-4759-9951-62D26F1D348D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotNetMaui.Mobile", "dotNetMaui.Mobile\dotNetMaui.Mobile.csproj", "{5CD0B480-6C54-48B8-9EB3-15374C3A443D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05FC083C-F2B1-4759-9951-62D26F1D348D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FC083C-F2B1-4759-9951-62D26F1D348D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FC083C-F2B1-4759-9951-62D26F1D348D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FC083C-F2B1-4759-9951-62D26F1D348D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD0B480-6C54-48B8-9EB3-15374C3A443D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD0B480-6C54-48B8-9EB3-15374C3A443D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD0B480-6C54-48B8-9EB3-15374C3A443D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD0B480-6C54-48B8-9EB3-15374C3A443D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
