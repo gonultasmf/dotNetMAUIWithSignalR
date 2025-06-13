@@ -84,7 +84,7 @@ public class UserFunction : IUserFunction
         private string GenerateJwtToken(TblUser user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("1234567890123456");
+            var key = Encoding.ASCII.GetBytes("12345678901234567890123456789012");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),

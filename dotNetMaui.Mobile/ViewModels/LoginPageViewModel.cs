@@ -19,15 +19,16 @@ namespace dotNetMaui.Mobile.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private ServiceProvider _serviceProvider;
+        private Services.ServiceProvider _serviceProvider;
         private HttpClient _httpClient;
 
-        public LoginPageViewModel(ServiceProvider serviceProvider)
+        public LoginPageViewModel(Services.ServiceProvider serviceProvider)
         {
             UserName = "wanda";
             Password = "Abc12345";
             IsProcessing = false;
             _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:5072");
 
             LoginCommand = new Command(() =>
             {

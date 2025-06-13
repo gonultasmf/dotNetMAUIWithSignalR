@@ -23,12 +23,12 @@ namespace dotNetMaui.Mobile.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private ServiceProvider _serviceProvider;
+        private Services.ServiceProvider _serviceProvider;
         private ChatHub _chatHub;
 
         private HttpClient _httpClient;
 
-        public ListChatPageViewModel(ServiceProvider serviceProvider, ChatHub chatHub)
+        public ListChatPageViewModel(Services.ServiceProvider serviceProvider, ChatHub chatHub)
         {
             UserInfo = new User();
             UserFriends = new ObservableCollection<User>();

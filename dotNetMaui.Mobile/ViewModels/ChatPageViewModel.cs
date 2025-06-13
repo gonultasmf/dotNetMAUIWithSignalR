@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Input;
-using static Android.App.Notification.MessagingStyle;
 
 namespace dotNetMaui.Mobile.ViewModels
 {
@@ -29,7 +28,7 @@ namespace dotNetMaui.Mobile.ViewModels
             
         }
 
-        private ServiceProvider _serviceProvider;
+        private Services.ServiceProvider _serviceProvider;
         private HttpClient _httpClient;
         private ChatHub _chatHub;
 
@@ -38,7 +37,7 @@ namespace dotNetMaui.Mobile.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public ChatPageViewModel(ServiceProvider serviceProvider, ChatHub chatHub)
+        public ChatPageViewModel(Services.ServiceProvider serviceProvider, ChatHub chatHub)
         {
             Messages = new ObservableCollection<Models.Message>();
             _serviceProvider = serviceProvider;
@@ -46,6 +45,7 @@ namespace dotNetMaui.Mobile.ViewModels
             _chatHub.AddReceivedMessageHandler(OnReceiveMessage);
             _chatHub.Connect();
             _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:5072");
             SendMessageCommand = new Command(async () =>
             {
                 try
